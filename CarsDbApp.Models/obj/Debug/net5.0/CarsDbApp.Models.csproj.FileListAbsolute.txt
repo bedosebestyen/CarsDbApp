@@ -1,0 +1,12 @@
+C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Models\bin\Debug\net5.0\CarsDbApp.Models.deps.json
+C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Models\bin\Debug\net5.0\CarsDbApp.Models.dll
+C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Models\bin\Debug\net5.0\CarsDbApp.Models.pdb
+C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Models\obj\Debug\net5.0\CarsDbApp.Models.csproj.AssemblyReference.cache
+C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Models\obj\Debug\net5.0\CarsDbApp.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Models\obj\Debug\net5.0\CarsDbApp.Models.AssemblyInfoInputs.cache
+C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Models\obj\Debug\net5.0\CarsDbApp.Models.AssemblyInfo.cs
+C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Models\obj\Debug\net5.0\CarsDbApp.Models.csproj.CoreCompileInputs.cache
+C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Models\obj\Debug\net5.0\CarsDbApp.Models.dll
+C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Models\obj\Debug\net5.0\refint\CarsDbApp.Models.dll
+C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Models\obj\Debug\net5.0\CarsDbApp.Models.pdb
+C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Models\obj\Debug\net5.0\ref\CarsDbApp.Models.dll

@@ -1,0 +1,17 @@
+C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Logic\bin\Debug\net5.0\CarsDbApp.Logic.deps.json
+C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Logic\bin\Debug\net5.0\CarsDbApp.Logic.dll
+C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Logic\bin\Debug\net5.0\CarsDbApp.Logic.pdb
+C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Logic\bin\Debug\net5.0\CarsDbApp.Models.dll
+C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Logic\bin\Debug\net5.0\CarsDbApp.Repository.dll
+C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Logic\bin\Debug\net5.0\CarsDbApp.Repository.pdb
+C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Logic\bin\Debug\net5.0\CarsDbApp.Models.pdb
+C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Logic\obj\Debug\net5.0\CarsDbApp.Logic.csproj.AssemblyReference.cache
+C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Logic\obj\Debug\net5.0\CarsDbApp.Logic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Logic\obj\Debug\net5.0\CarsDbApp.Logic.AssemblyInfoInputs.cache
+C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Logic\obj\Debug\net5.0\CarsDbApp.Logic.AssemblyInfo.cs
+C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Logic\obj\Debug\net5.0\CarsDbApp.Logic.csproj.CoreCompileInputs.cache
+C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Logic\obj\Debug\net5.0\CarsDbApp.Logic.csproj.CopyComplete
+C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Logic\obj\Debug\net5.0\CarsDbApp.Logic.dll
+C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Logic\obj\Debug\net5.0\refint\CarsDbApp.Logic.dll
+C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Logic\obj\Debug\net5.0\CarsDbApp.Logic.pdb
+C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Logic\obj\Debug\net5.0\ref\CarsDbApp.Logic.dll
