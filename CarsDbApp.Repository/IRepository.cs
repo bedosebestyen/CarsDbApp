@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarsDbApp.Repository
+namespace DYRQO6_HFT_2021222.Repository
 {
     public interface IRepository<T> where T : class
     {

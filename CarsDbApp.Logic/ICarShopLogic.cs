@@ -1,7 +1,7 @@
-﻿using CarsDbApp.Models;
+﻿using DYRQO6_HFT_2021222.Models;
 using System.Linq;
 
-namespace CarsDbApp.Logic
+namespace DYRQO6_HFT_2021222.Logic
 {
     public interface ICarShopLogic
     {

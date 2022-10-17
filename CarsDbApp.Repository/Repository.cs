@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace CarsDbApp.Repository
+namespace DYRQO6_HFT_2021222.Repository
 {
     public abstract class Repository<T> : IRepository<T> where T : class
     {

@@ -1,5 +1,5 @@
-﻿using CarsDbApp.Models;
-using CarsDbApp.Repository;
+﻿using DYRQO6_HFT_2021222.Models;
+using DYRQO6_HFT_2021222.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarsDbApp.Logic
+namespace DYRQO6_HFT_2021222.Logic
 {
     public class CarsLogic : ICarsLogic
     {

@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarsDbApp.Client", "CarsDbApp.Client\CarsDbApp.Client.csproj", "{B87813B9-6107-4023-8FA2-D5C17FFD3E7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DYRQO6_HFT_2021222.Client", "CarsDbApp.Client\DYRQO6_HFT_2021222.Client.csproj", "{B87813B9-6107-4023-8FA2-D5C17FFD3E7E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarsDbApp.Models", "CarsDbApp.Models\CarsDbApp.Models.csproj", "{172B7474-3883-4629-8944-B3664C005A4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DYRQO6_HFT_2021222.Models", "CarsDbApp.Models\DYRQO6_HFT_2021222.Models.csproj", "{172B7474-3883-4629-8944-B3664C005A4E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarsDbApp.Repository", "CarsDbApp.Repository\CarsDbApp.Repository.csproj", "{4B7DD56D-34D3-4CFD-A785-D38F51FD4CB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DYRQO6_HFT_2021222.Repository", "CarsDbApp.Repository\DYRQO6_HFT_2021222.Repository.csproj", "{4B7DD56D-34D3-4CFD-A785-D38F51FD4CB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarsDbApp.Logic", "CarsDbApp.Logic\CarsDbApp.Logic.csproj", "{B6F45635-4079-4703-BED0-E8D08B711B14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DYRQO6_HFT_2021222.Logic", "CarsDbApp.Logic\DYRQO6_HFT_2021222.Logic.csproj", "{B6F45635-4079-4703-BED0-E8D08B711B14}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

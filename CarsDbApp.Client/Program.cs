@@ -1,8 +1,8 @@
-﻿using CarsDbApp.Logic;
-using CarsDbApp.Repository;
+﻿using DYRQO6_HFT_2021222.Logic;
+using DYRQO6_HFT_2021222.Repository;
 using System;
 
-namespace CarsDbApp.Client
+namespace DYRQO6_HFT_2021222.Client
 {
     internal class Program
     {

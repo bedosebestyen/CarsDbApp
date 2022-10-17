@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CarsDbApp.Repository\CarsDbApp.Repository.csproj" />
+    <ProjectReference Include="..\CarsDbApp.Repository\DYRQO6_HFT_2021222.Repository.csproj" />
   </ItemGroup>
 
 </Project>

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarsDbApp.Models
+namespace DYRQO6_HFT_2021222.Models
 {
     public class Cars
     {

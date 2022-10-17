@@ -1,11 +1,11 @@
-﻿using CarsDbApp.Models;
+﻿using DYRQO6_HFT_2021222.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarsDbApp.Repository
+namespace DYRQO6_HFT_2021222.Repository
 {
     public class CustomerRepository : Repository<Customer>, IRepository<Customer> 
     {

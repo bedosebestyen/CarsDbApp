@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\sebes\\source\\repos\\CarsDbApp\\CarsDbApp.Repository\\CarsDbApp.Repository.csproj": {
-                "projectPath": "C:\\Users\\sebes\\source\\repos\\CarsDbApp\\CarsDbApp.Repository\\CarsDbApp.Repository.csproj"
+              "C:\\Users\\sebes\\source\\repos\\CarsDbApp\\CarsDbApp.Repository\\DYRQO6_HFT_2021222.Repository.csproj": {
+                "projectPath": "C:\\Users\\sebes\\source\\repos\\CarsDbApp\\CarsDbApp.Repository\\DYRQO6_HFT_2021222.Repository.csproj"
               }
             }
           }
@@ -63,12 +63,12 @@
         }
       }
     },
-    "C:\\Users\\sebes\\source\\repos\\CarsDbApp\\CarsDbApp.Models\\CarsDbApp.Models.csproj": {
+    "C:\\Users\\sebes\\source\\repos\\CarsDbApp\\CarsDbApp.Models\\DYRQO6_HFT_2021222.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sebes\\source\\repos\\CarsDbApp\\CarsDbApp.Models\\CarsDbApp.Models.csproj",
-        "projectName": "CarsDbApp.Models",
-        "projectPath": "C:\\Users\\sebes\\source\\repos\\CarsDbApp\\CarsDbApp.Models\\CarsDbApp.Models.csproj",
+        "projectUniqueName": "C:\\Users\\sebes\\source\\repos\\CarsDbApp\\CarsDbApp.Models\\DYRQO6_HFT_2021222.Models.csproj",
+        "projectName": "DYRQO6_HFT_2021222.Models",
+        "projectPath": "C:\\Users\\sebes\\source\\repos\\CarsDbApp\\CarsDbApp.Models\\DYRQO6_HFT_2021222.Models.csproj",
         "packagesPath": "C:\\Users\\sebes\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\sebes\\source\\repos\\CarsDbApp\\CarsDbApp.Models\\obj\\",
         "projectStyle": "PackageReference",
@@ -118,12 +118,12 @@
         }
       }
     },
-    "C:\\Users\\sebes\\source\\repos\\CarsDbApp\\CarsDbApp.Repository\\CarsDbApp.Repository.csproj": {
+    "C:\\Users\\sebes\\source\\repos\\CarsDbApp\\CarsDbApp.Repository\\DYRQO6_HFT_2021222.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sebes\\source\\repos\\CarsDbApp\\CarsDbApp.Repository\\CarsDbApp.Repository.csproj",
-        "projectName": "CarsDbApp.Repository",
-        "projectPath": "C:\\Users\\sebes\\source\\repos\\CarsDbApp\\CarsDbApp.Repository\\CarsDbApp.Repository.csproj",
+        "projectUniqueName": "C:\\Users\\sebes\\source\\repos\\CarsDbApp\\CarsDbApp.Repository\\DYRQO6_HFT_2021222.Repository.csproj",
+        "projectName": "DYRQO6_HFT_2021222.Repository",
+        "projectPath": "C:\\Users\\sebes\\source\\repos\\CarsDbApp\\CarsDbApp.Repository\\DYRQO6_HFT_2021222.Repository.csproj",
         "packagesPath": "C:\\Users\\sebes\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\sebes\\source\\repos\\CarsDbApp\\CarsDbApp.Repository\\obj\\",
         "projectStyle": "PackageReference",
@@ -142,8 +142,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\sebes\\source\\repos\\CarsDbApp\\CarsDbApp.Models\\CarsDbApp.Models.csproj": {
-                "projectPath": "C:\\Users\\sebes\\source\\repos\\CarsDbApp\\CarsDbApp.Models\\CarsDbApp.Models.csproj"
+              "C:\\Users\\sebes\\source\\repos\\CarsDbApp\\CarsDbApp.Models\\DYRQO6_HFT_2021222.Models.csproj": {
+                "projectPath": "C:\\Users\\sebes\\source\\repos\\CarsDbApp\\CarsDbApp.Models\\DYRQO6_HFT_2021222.Models.csproj"
               }
             }
           }

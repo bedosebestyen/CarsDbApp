@@ -1,10 +1,10 @@
-﻿using CarsDbApp.Models;
-using CarsDbApp.Repository;
+﻿using DYRQO6_HFT_2021222.Models;
+using DYRQO6_HFT_2021222.Repository;
 using System;
 using System.Linq;
 using System.Numerics;
 
-namespace CarsDbApp.Logic
+namespace DYRQO6_HFT_2021222.Logic
 {
     public class CustomerLogic : ICustomerLogic
     {
