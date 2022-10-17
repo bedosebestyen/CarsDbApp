@@ -1,4 +1,4 @@
-﻿using DYRQO6_HFT_2021222.Models;
+﻿using DYRQO6_HFT_2022231.Models;
 using Castle.DynamicProxy.Generators;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DYRQO6_HFT_2021222.Repository
+namespace DYRQO6_HFT_2022231.Repository
 {
     public class CarShopRepository : Repository<CarShop>, IRepository<CarShop>
     {

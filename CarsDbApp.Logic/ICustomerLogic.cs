@@ -1,7 +1,7 @@
-﻿using DYRQO6_HFT_2021222.Models;
+﻿using DYRQO6_HFT_2022231.Models;
 using System.Linq;
 
-namespace DYRQO6_HFT_2021222.Logic
+namespace DYRQO6_HFT_2022231.Logic
 {
     public interface ICustomerLogic
     {

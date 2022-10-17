@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sebes\\source\\repos\\CarsDbApp\\CarsDbApp.Models\\DYRQO6_HFT_2021222.Models.csproj",
-      "projectName": "DYRQO6_HFT_2021222.Models",
-      "projectPath": "C:\\Users\\sebes\\source\\repos\\CarsDbApp\\CarsDbApp.Models\\DYRQO6_HFT_2021222.Models.csproj",
+      "projectUniqueName": "C:\\Users\\sebes\\source\\repos\\CarsDbApp\\CarsDbApp.Models\\DYRQO6_HFT_2022231.Models.csproj",
+      "projectName": "DYRQO6_HFT_2022231.Models",
+      "projectPath": "C:\\Users\\sebes\\source\\repos\\CarsDbApp\\CarsDbApp.Models\\DYRQO6_HFT_2022231.Models.csproj",
       "packagesPath": "C:\\Users\\sebes\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\sebes\\source\\repos\\CarsDbApp\\CarsDbApp.Models\\obj\\",
       "projectStyle": "PackageReference",

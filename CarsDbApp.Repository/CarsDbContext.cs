@@ -1,4 +1,4 @@
-﻿using DYRQO6_HFT_2021222.Models;
+﻿using DYRQO6_HFT_2022231.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DYRQO6_HFT_2021222.Repository
+namespace DYRQO6_HFT_2022231.Repository
 {
     public class CarsDbContext : DbContext
     {

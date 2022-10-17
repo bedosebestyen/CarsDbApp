@@ -1,11 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CarsDbApp.Repository\DYRQO6_HFT_2021222.Repository.csproj" />
+    <ProjectReference Include="..\CarsDbApp.Models\DYRQO6_HFT_2022231.Models.csproj" />
   </ItemGroup>
 
 </Project>
