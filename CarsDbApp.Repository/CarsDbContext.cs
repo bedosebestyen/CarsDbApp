@@ -13,6 +13,7 @@ namespace DYRQO6_HFT_2022231.Repository
         public DbSet<Customer> Customer { get; set; }
         public DbSet<CarShop> Carshop { get; set; }
         public DbSet<Cars> Cars { get; set; }
+        public DbSet<Manager> Manager { get; set; }
         public CarsDbContext()
         {
             this.Database.EnsureCreated();
@@ -46,14 +47,21 @@ namespace DYRQO6_HFT_2022231.Repository
                 .HasMany(r => r.Customers)
                 .WithMany(c => c.Shop);
 
+            modelBuilder.Entity<Manager>()
+                .HasOne(m => m.CarShop)
+                .WithOne(c => c.Manager)
+                .HasForeignKey<CarShop>(m => m.ManagerId)
+                .OnDelete(DeleteBehavior.Cascade);
+            // legyen egy manager a shopnak, ez plusz egy tábla
+
             modelBuilder.Entity<Cars>().HasData(new Cars[]
             {
-                new Cars("1#Audi#white#1#1#2019*04*15"),
-                new Cars("2#Skoda#king blue#2#2#2009*04*15"),
-                new Cars("3#Volkswagen#black#3#3#2022*01*30"),
-                new Cars("4#Fiat#red#4#3#2000*09*19"),
-                new Cars("5#BMW#black#4#1#2020*02*22"),
-                new Cars("6#Peugeot#white#1#1#2014*06*08")
+                new Cars("1#Audi#white#1#1#2019*04*15#10000000"),
+                new Cars("2#Skoda#king blue#2#2#2009*04*15#5000000"),
+                new Cars("3#Volkswagen#black#3#3#2022*01*30#6000000"),
+                new Cars("4#Fiat#red#4#3#2000*09*19#3000000"),
+                new Cars("5#BMW#black#4#1#2020*02*22#11000000"),
+                new Cars("6#Peugeot#white#1#1#2014*06*08#4000000")
             });
             modelBuilder.Entity<Customer>().HasData(new Customer[]
             {
@@ -64,9 +72,15 @@ namespace DYRQO6_HFT_2022231.Repository
             });
             modelBuilder.Entity<CarShop>().HasData(new CarShop[]
             {
-                new CarShop("1#Best cars#5#3300 Fittro Street"),
-                new CarShop("2#Awesome machines#4#1714 Mulberry Lane"),
-                new CarShop("3#Carscarscars#10#3799 Marie Street")
+                new CarShop("1#Best cars#5#3300 Fittro Street#1"),
+                new CarShop("2#Awesome machines#4#1714 Mulberry Lane#2"),
+                new CarShop("3#Carscarscars#10#3799 Marie Street#3")
+            });
+            modelBuilder.Entity<Manager>().HasData(new Manager[]
+            {
+                new Manager("1#Pradip Xanthippe#500000#36#1"),
+                new Manager("2#Lorrin Matthei#600000#47#2"),
+                new Manager("3#Rúni Surayya#800000#59#3")
             });
         }
     }

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "DYRQO6_HFT_2022231.Models/1.0.0": {
+        "runtime": {
+          "DYRQO6_HFT_2022231.Models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DYRQO6_HFT_2022231.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
