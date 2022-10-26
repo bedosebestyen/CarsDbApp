@@ -28,6 +28,11 @@ namespace DYRQO6_HFT_2022231.Logic
             this.repo.Delete(id);
         }
 
+        public int? GetYearlyIncome(int year)
+        {
+            throw new NotImplementedException();  
+        }
+
         public CarShop Read(int id)
         {
             return this.repo.Read(id);

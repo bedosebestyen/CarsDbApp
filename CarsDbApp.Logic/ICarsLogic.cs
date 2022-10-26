@@ -1,4 +1,5 @@
 ﻿using DYRQO6_HFT_2022231.Models;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace DYRQO6_HFT_2022231.Logic
@@ -10,5 +11,7 @@ namespace DYRQO6_HFT_2022231.Logic
         Cars Read(int id);
         IQueryable<Cars> ReadAll();
         void Update(Cars item);
+        IEnumerable<Customer> GetCustomerWithMostExpensiveCar();
+
     }
 }

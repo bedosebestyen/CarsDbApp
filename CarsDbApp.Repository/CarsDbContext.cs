@@ -52,7 +52,6 @@ namespace DYRQO6_HFT_2022231.Repository
                 .WithOne(c => c.Manager)
                 .HasForeignKey<CarShop>(m => m.ManagerId)
                 .OnDelete(DeleteBehavior.Cascade);
-            // legyen egy manager a shopnak, ez plusz egy tábla
 
             modelBuilder.Entity<Cars>().HasData(new Cars[]
             {

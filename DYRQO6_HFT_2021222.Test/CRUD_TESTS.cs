@@ -9,11 +9,10 @@ using System.Linq;
 
 namespace DYRQO6_HFT_2021222.Test
 {
-    public class Tester
+    public class CRUD_TESTS
     {
         CarsLogic cl;
         Mock<IRepository<Cars>> mockCarsRepository;
-        //kell egy customerlogic, hozz mockcustomerrepository, és példányosítás(mint carsnál a 30., és 32. sor)
         CustomerLogic crl;
         Mock<IRepository<Customer>> mockCustomerRepository;
         CarShopLogic csl;
@@ -82,5 +81,7 @@ namespace DYRQO6_HFT_2021222.Test
                 x => x.Create(sample),
                 Times.Once);
         }
+
     }
+    
 }
