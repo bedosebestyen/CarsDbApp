@@ -16,14 +16,26 @@ namespace DYRQO6_HFT_2022231.Test
         [SetUp]
         public void Init()
         {
-            cl = new CarsLogic(new FakeCarsRepository());
+            cl = new CarsLogic(new FakeCarsRepository(), new FakeCustomersRepositroy(), new FakeCarShopRepositroy());
         }
         [Test]
         public void MostExpensiveCarTest()
         {
             //ACT
             var actual = cl.GetCustomerWithMostExpensiveCar();
-            var expected = new Customer("4#50#Isaiah Motley#217 Emeral Dreams Drive");
+            var expected = new IEnumerable<Customer>()
+            {
+                new Customer()
+                {
+                    //CustomerId = 4,
+                    //Age = 50,
+                    Name = "Isaiah Motley"
+                    //Address = "217 Emeral Dreams Drive",
+                    //Cars = null,
+                    //Shop = null
+                }
+            };
+                
             //ASSERT
             Assert.AreEqual(expected, actual);
         }

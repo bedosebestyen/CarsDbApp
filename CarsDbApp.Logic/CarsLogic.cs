@@ -7,53 +7,59 @@ using System.Numerics;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace DYRQO6_HFT_2022231.Logic
 {
     public class CarsLogic : ICarsLogic
     {
-        IRepository<Cars> repo;
+        IRepository<Cars> carsrepo;
+        IRepository<Customer> custrepo;
+        IRepository<CarShop> shoprepo;
 
-        public CarsLogic(IRepository<Cars> repo)
+        public CarsLogic(IRepository<Cars> carsrep, IRepository<Customer> custrep, IRepository<CarShop> shoprep)
         {
-            this.repo = repo;
+            carsrepo = carsrep;
+            custrepo = custrep;
+            shoprepo = shoprep;
         }
 
         public void Create(Cars item)
         {
-            this.repo.Create(item);
+            carsrepo.Create(item);
         }
 
         public void Delete(int id)
         {
-            this.repo.Delete(id);
+            carsrepo.Delete(id);
         }
 
         public Cars Read(int id)
         {
-            return this.repo.Read(id);
+            return carsrepo.Read(id);
         }
 
         public IQueryable<Cars> ReadAll()
         {
-            return this.repo.ReadAll(); ;
+            return carsrepo.ReadAll(); ;
         }
 
         public void Update(Cars item)
         {
-            this.repo.Create(item);
+            carsrepo.Create(item);
         }
         public IEnumerable<Customer> GetCustomerWithMostExpensiveCar()
         {
-            var expensiveCar = from cars in this.repo.ReadAll()
-                         let MostExpensiveCar = this.repo.ReadAll().Max(x => x.Price)
-                         where cars.Price == MostExpensiveCar
-                         select cars;
-            var customer = from cars in this.repo.ReadAll()
-                           join ecar in expensiveCar on cars.CarId equals ecar.CarId
-                           where ecar.CarId == cars.CarId
-                           select cars.Customer;
-            return customer;
+
+            var query = from x in carsrepo.ReadAll()
+                        from t in custrepo.ReadAll()
+                        let MostExpensiveCar = carsrepo.ReadAll().Max(x => x.Price)
+                        where x.Price == MostExpensiveCar && t.CustomerId == x.CustomerId
+                        select new Customer()
+                        {
+                            Name = t.Name
+                        };
+            return query;
         }
 
     }
