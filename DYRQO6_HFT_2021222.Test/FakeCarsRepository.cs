@@ -109,4 +109,36 @@ namespace DYRQO6_HFT_2022231.Test
             throw new NotImplementedException();
         }
     }
+    public class FakeManagerRepository : IRepository<Manager>
+    {
+        public void Create(Manager item)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Manager Read(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IQueryable<Manager> ReadAll()
+        {
+            return new List<Manager>()
+            {
+                new Manager("1#Pradip Xanthippe#500000#36#1"),
+                new Manager("2#Lorrin Matthei#600000#47#2"),
+                new Manager("3#Rúni Surayya#800000#59#3")
+            }.AsQueryable();
+        }
+
+        public void Update(Manager item)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

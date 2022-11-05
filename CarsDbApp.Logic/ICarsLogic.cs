@@ -11,7 +11,9 @@ namespace DYRQO6_HFT_2022231.Logic
         Cars Read(int id);
         IQueryable<Cars> ReadAll();
         void Update(Cars item);
-        IEnumerable<Customer> GetCustomerWithMostExpensiveCar();
-
+        IEnumerable<object> GetCustomerWithMostExpensiveCar();
+        IEnumerable<object> GetCarPurchaseDate(string name);
+        IEnumerable<CustomerInfo> GetYoungestWithCar();
+        IEnumerable<object> MostExpensiveCarInSpecifiedShop(string name);
     }
 }

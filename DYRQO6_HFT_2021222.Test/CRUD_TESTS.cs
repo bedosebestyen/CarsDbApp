@@ -17,6 +17,8 @@ namespace DYRQO6_HFT_2021222.Test
         Mock<IRepository<Customer>> mockCustomerRepository;
         CarShopLogic csl;
         Mock<IRepository<CarShop>> mockCarShopRepository;
+
+        Mock<IRepository<Manager>> mockManagerRepository;
         [SetUp]
         public void Init()
         {
@@ -33,10 +35,11 @@ namespace DYRQO6_HFT_2021222.Test
             mockCarsRepository = new Mock<IRepository<Cars>>();
             mockCustomerRepository = new Mock<IRepository<Customer>>();
             mockCarShopRepository = new Mock<IRepository<CarShop>>();
+            mockManagerRepository = new Mock<IRepository<Manager>>();
             mockCarsRepository.Setup(x => x.ReadAll()).Returns(inputdata);
             cl = new CarsLogic(mockCarsRepository.Object, mockCustomerRepository.Object, mockCarShopRepository.Object);
             crl = new CustomerLogic(mockCustomerRepository.Object);
-            csl = new CarShopLogic(mockCarShopRepository.Object);
+            csl = new CarShopLogic(mockCarShopRepository.Object, mockManagerRepository.Object);
         }
         [Test]
         public void CarsReadAllTest()

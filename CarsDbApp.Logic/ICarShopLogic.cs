@@ -1,4 +1,5 @@
 ﻿using DYRQO6_HFT_2022231.Models;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace DYRQO6_HFT_2022231.Logic
@@ -10,6 +11,6 @@ namespace DYRQO6_HFT_2022231.Logic
         CarShop Read(int id);
         IQueryable<CarShop> ReadAll();
         void Update(CarShop item);
-        int? GetYearlyIncome(int year);
+        public IEnumerable<object> GetHighestPaidManager();
     }
 }

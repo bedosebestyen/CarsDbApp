@@ -55,12 +55,12 @@ namespace DYRQO6_HFT_2022231.Repository
 
             modelBuilder.Entity<Cars>().HasData(new Cars[]
             {
-                new Cars("1#Audi#white#1#1#2019*04*15#10000000"),
-                new Cars("2#Skoda#king blue#2#2#2009*04*15#5000000"),
+                new Cars("1#Skoda#king blue#2#2#2009*04*15#5000000"),
+                new Cars("2#Peugeot#white#1#1#2019*06*08#4000000"),
                 new Cars("3#Volkswagen#black#3#3#2022*01*30#6000000"),
                 new Cars("4#Fiat#red#4#3#2000*09*19#3000000"),
                 new Cars("5#BMW#black#4#1#2020*02*22#11000000"),
-                new Cars("6#Peugeot#white#1#1#2014*06*08#4000000")
+                new Cars("6#Audi#white#1#1#2019*04*15#10000000")
             });
             modelBuilder.Entity<Customer>().HasData(new Customer[]
             {

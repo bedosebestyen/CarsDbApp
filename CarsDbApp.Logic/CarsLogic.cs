@@ -48,19 +48,91 @@ namespace DYRQO6_HFT_2022231.Logic
         {
             carsrepo.Create(item);
         }
-        public IEnumerable<Customer> GetCustomerWithMostExpensiveCar()
+        public IEnumerable<object> GetCustomerWithMostExpensiveCar()
         {
-
             var query = from x in carsrepo.ReadAll()
-                        from t in custrepo.ReadAll()
                         let MostExpensiveCar = carsrepo.ReadAll().Max(x => x.Price)
-                        where x.Price == MostExpensiveCar && t.CustomerId == x.CustomerId
-                        select new Customer()
+                        where x.Price == MostExpensiveCar && x.Customer.CustomerId == x.CustomerId
+                        select new
                         {
-                            Name = t.Name
+                            Name = x.Customer.Name
                         };
             return query;
         }
 
+        public IEnumerable<object> GetCarPurchaseDate(string name)
+        {
+            return from x in carsrepo.ReadAll()
+                   from y in custrepo.ReadAll()
+                   where y.Name == name 
+                   && x.CustomerId == y.CustomerId
+                   select new
+                   {
+                       Date = x.PurchaseDate.Year,
+                       Name = y.Name,
+                       CarType = x.CarType
+                   };
+        }
+
+        public IEnumerable<CustomerInfo> GetYoungestWithCar()
+        {
+
+            return from x in carsrepo.ReadAll()
+                   from y in shoprepo.ReadAll()
+                   from t in custrepo.ReadAll()
+                   let youngest = custrepo.ReadAll().Min(t => t.Age)
+                   where youngest == t.Age && t.CustomerId == x.CustomerId && x.ShopId == y.ShopId
+                   select new CustomerInfo
+                   {
+                       Name = t.Name,
+                       Age = t.Age,
+                       CarType = x.CarType,
+                       CarShop = y.Name
+                   };
+        }
+
+        public IEnumerable<object> MostExpensiveCarInSpecifiedShop(string name)
+        {
+            return from x in carsrepo.ReadAll()
+                   from y in shoprepo.ReadAll()
+                   let Car = carsrepo.ReadAll().Max(x => x.Price)
+                   where y.Name == name && x.Price == Car && x.ShopId == y.ShopId
+                   select new
+                   {
+                       CarType = x.CarType,
+                       Price = x.Price,
+                       Shop = y.Name
+                   };
+        }
+    }
+    public class CustomerInfo
+    {
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public string CarType { get; set; }
+        public string CarShop { get; set; }
+
+
+        public override bool Equals(object obj)
+        {
+            Customer b = obj as Customer;
+            Cars c = obj as Cars;
+            CarShop r = obj as CarShop;
+            if (b == null)
+            {
+                return false;
+            }
+            else
+            {
+                return this.Name == b.Name
+                    && this.Age == b.Age
+                    && this.CarType == c.CarType
+                    && this.CarShop == r.Name;
+            }
+        }
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(this.Name, this.Age, this.CarType, this.CarShop);
+        }
     }
 }

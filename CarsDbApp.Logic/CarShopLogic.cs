@@ -11,41 +11,50 @@ namespace DYRQO6_HFT_2022231.Logic
 {
     public class CarShopLogic : ICarShopLogic
     {
-        IRepository<CarShop> repo;
-
-        public CarShopLogic(IRepository<CarShop> repo)
+        IRepository<CarShop> shoprepo;
+        IRepository<Manager> manrepo;
+        public CarShopLogic(IRepository<CarShop> repo, IRepository<Manager> mrepo)
         {
-            this.repo = repo;
+            shoprepo = repo;
+            manrepo = mrepo;
         }
 
         public void Create(CarShop item)
         {
-            this.repo.Create(item);
+            shoprepo.Create(item);
         }
 
         public void Delete(int id)
         {
-            this.repo.Delete(id);
+            shoprepo.Delete(id);
         }
-
-        public int? GetYearlyIncome(int year)
-        {
-            throw new NotImplementedException();  
-        }
-
         public CarShop Read(int id)
         {
-            return this.repo.Read(id);
+            return shoprepo.Read(id);
         }
 
         public IQueryable<CarShop> ReadAll()
         {
-            return this.repo.ReadAll(); ;
+            return shoprepo.ReadAll(); ;
         }
 
         public void Update(CarShop item)
         {
-            this.repo.Create(item);
+            shoprepo.Create(item);
+        }
+        public IEnumerable<object> GetHighestPaidManager()
+        {
+            var query = from x in shoprepo.ReadAll()
+                        from y in manrepo.ReadAll()
+                        let highest_salary = manrepo.ReadAll().Max(t => t.Salary)
+                        where highest_salary == y.Salary && y.ManagerId == x.ManagerId
+                        select new
+                        {
+                            Name = y.Name,
+                            Salary = y.Salary,
+                            Shop = x.Name
+                        };
+            return query;
         }
     }
 }
