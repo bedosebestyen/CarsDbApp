@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace DYRQO6_HFT_2022231.Logic
 {
 
-    internal class ManagerLogic : IManagerLogic
+    public class ManagerLogic : IManagerLogic
     {
         IRepository<Manager> manrepo;
         public ManagerLogic(IRepository<Manager> mrepo)

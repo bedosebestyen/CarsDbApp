@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace DYRQO6_HFT_2022231.Models
@@ -19,7 +20,9 @@ namespace DYRQO6_HFT_2022231.Models
         [ForeignKey("ManagerId")]
         public int ManagerId { get; set; }
         public virtual Manager Manager { get; set; }
+        [JsonIgnore]
         public virtual ICollection<Cars> Cars { get; set; }
+        [JsonIgnore]
         public virtual ICollection<Customer> Customers { get; set; }
         public CarShop()
         {

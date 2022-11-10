@@ -22,8 +22,6 @@ namespace DYRQO6_HFT_2022231.Repository
         {
             if (!builder.IsConfigured)
             {
-                string conn =
-                        @"";
                 builder
                    .UseInMemoryDatabase("cars")
                    .UseLazyLoadingProxies();

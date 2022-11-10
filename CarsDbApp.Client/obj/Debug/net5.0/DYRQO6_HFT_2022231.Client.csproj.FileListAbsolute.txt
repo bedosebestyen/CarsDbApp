@@ -17,3 +17,7 @@ C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Client\obj\Debug\net5.0\refint\D
 C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Client\obj\Debug\net5.0\DYRQO6_HFT_2022231.Client.pdb
 C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Client\obj\Debug\net5.0\DYRQO6_HFT_2022231.Client.genruntimeconfig.cache
 C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Client\obj\Debug\net5.0\ref\DYRQO6_HFT_2022231.Client.dll
+C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Client\bin\Debug\net5.0\ConsoleMenu.dll
+C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Client\bin\Debug\net5.0\System.Net.Http.Formatting.dll
+C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Client\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Client\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll

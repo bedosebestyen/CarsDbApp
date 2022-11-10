@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace DYRQO6_HFT_2022231.Models
@@ -15,8 +16,9 @@ namespace DYRQO6_HFT_2022231.Models
         public int Age { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }
-
+        [JsonIgnore]
         public virtual ICollection<Cars> Cars { get; set; }
+        [JsonIgnore]
         public virtual ICollection<CarShop> Shop { get; set; }
         public Customer()
         {
