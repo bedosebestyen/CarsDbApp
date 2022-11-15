@@ -56,49 +56,49 @@ namespace DYRQO6_HFT_2021222.Client
         }
         #endregion
         #region Customer
-        static void Create(string entity)
-        {
-            if (entity == "Customer")
-            {
-                Console.Write("Enter cutomer name: ");
-                string name = Console.ReadLine();
-                rest.Post(new Customer() { Name = name }, "customer");
-            }
-        }
-        static void List(string entity)
-        {
-            if (entity == "Customer")
-            {
-                List<Manager> customers = rest.Get<Manager>("customer");
-                foreach (var item in customers)
-                {
-                    Console.WriteLine(item.ManagerId + ": " + item.Name);
-                }
-            }
-            Console.ReadLine();
-        }
-        static void Update(string entity)
-        {
-            if (entity == "Customer")
-            {
-                Console.Write("Enter customers's id to update: ");
-                int id = int.Parse(Console.ReadLine());
-                Manager one = rest.Get<Manager>(id, "customer");
-                Console.Write($"New name [old: {one.Name}]: ");
-                string name = Console.ReadLine();
-                one.Name = name;
-                rest.Put(one, "customer");
-            }
-        }
-        static void Delete(string entity)
-        {
-            if (entity == "Customer")
-            {
-                Console.Write("Enter customer's id to delete: ");
-                int id = int.Parse(Console.ReadLine());
-                rest.Delete(id, "customer");
-            }
-        }
+        //static void Create(string entity)
+        //{
+        //    if (entity == "Customer")
+        //    {
+        //        Console.Write("Enter cutomer name: ");
+        //        string name = Console.ReadLine();
+        //        rest.Post(new Customer() { Name = name }, "customer");
+        //    }
+        //}
+        //static void List(string entity)
+        //{
+        //    if (entity == "Customer")
+        //    {
+        //        List<Manager> customers = rest.Get<Manager>("customer");
+        //        foreach (var item in customers)
+        //        {
+        //            Console.WriteLine(item.ManagerId + ": " + item.Name);
+        //        }
+        //    }
+        //    Console.ReadLine();
+        //}
+        //static void Update(string entity)
+        //{
+        //    if (entity == "Customer")
+        //    {
+        //        Console.Write("Enter customers's id to update: ");
+        //        int id = int.Parse(Console.ReadLine());
+        //        Manager one = rest.Get<Manager>(id, "customer");
+        //        Console.Write($"New name [old: {one.Name}]: ");
+        //        string name = Console.ReadLine();
+        //        one.Name = name;
+        //        rest.Put(one, "customer");
+        //    }
+        //}
+        //static void Delete(string entity)
+        //{
+        //    if (entity == "Customer")
+        //    {
+        //        Console.Write("Enter customer's id to delete: ");
+        //        int id = int.Parse(Console.ReadLine());
+        //        rest.Delete(id, "customer");
+        //    }
+        //}
         #endregion
         static void Main(string[] args)
         {

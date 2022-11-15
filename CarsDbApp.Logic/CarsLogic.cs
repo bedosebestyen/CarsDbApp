@@ -51,11 +51,12 @@ namespace DYRQO6_HFT_2022231.Logic
         public IEnumerable<object> GetCustomerWithMostExpensiveCar()
         {
             var query = from x in carsrepo.ReadAll()
+                        from y in custrepo.ReadAll()
                         let MostExpensiveCar = carsrepo.ReadAll().Max(x => x.Price)
-                        where x.Price == MostExpensiveCar && x.Customer.CustomerId == x.CustomerId
+                        where x.Price == MostExpensiveCar && y.CustomerId == x.CustomerId
                         select new
                         {
-                            Name = x.Customer.Name
+                            Name = y.Name
                         };
             return query;
         }
