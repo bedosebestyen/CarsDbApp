@@ -48,8 +48,8 @@ namespace DYRQO6_HFT_2022231.Test
             mockCustRepo = new Mock<IRepository<Customer>>();
             mockCustRepo.Setup(x => x.ReadAll()).Returns(new List<Customer>()
             {
-                new Customer("1#20#Winton Dickinson#695 Willison Street"),
-                new Customer("2#40#Osmond Chambers#2111 Sand Fork Road"),
+                new Customer("1#25#Winton Dickinson#695 Willison Street"),
+                new Customer("2#22#Osmond Chambers#2111 Sand Fork Road"),
                 new Customer("3#31#Talia Cooke#2390 Carriage Court"),
                 new Customer("4#50#Isaiah Motley#217 Emeral Dreams Drive")
             }.AsQueryable());
@@ -96,26 +96,20 @@ namespace DYRQO6_HFT_2022231.Test
         {
             //ACT
             var actual = cl.GetYoungestWithCar().ToList();
-            var expected = new List<CustomerInfo>()
+
+            var expected = new List<CustomerInfo>() 
             {
                 new CustomerInfo()
                 {
-                    Name = "Winton Dickinson",
-                    Age = 20,
-                    CarType = "Audi",
-                    CarShop = "Best Cars"
-                },
-                new CustomerInfo()
-                {
-                    Name = "Winton Dickinson",
-                    Age = 20,
-                    CarType = "Peugeot",
-                    CarShop = "Best Cars"
+                    Name = "Osmond Chambers",
+                    Age = 22,
+                    CarType = "Skoda",
+                    CarShop = "Awesome machines"
                 }
-                
             };
             //ASSERT
-            Assert.AreEqual(expected, actual);
+            Assert.That(actual[0].GetHashCode(), Is.EqualTo(new CustomerInfo() { Age = 22, CarShop = "Awesome machines",
+                CarType = "Skoda", Name = "Osmond Chambers"}.GetHashCode()));
             ;
         }
         [Test]

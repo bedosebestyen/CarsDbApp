@@ -62,8 +62,8 @@ namespace DYRQO6_HFT_2022231.Repository
             });
             modelBuilder.Entity<Customer>().HasData(new Customer[]
             {
-                new Customer("1#20#Winton Dickinson#695 Willison Street"),
-                new Customer("2#40#Osmond Chambers#2111 Sand Fork Road"),
+                new Customer("1#25#Winton Dickinson#695 Willison Street"),
+                new Customer("2#22#Osmond Chambers#2111 Sand Fork Road"),
                 new Customer("3#31#Talia Cooke#2390 Carriage Court"),
                 new Customer("4#50#Isaiah Motley#217 Emeral Dreams Drive")
             });

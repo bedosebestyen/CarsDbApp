@@ -1,3 +1,4 @@
+using DYRQO6_HFT_2022231.Repository;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
