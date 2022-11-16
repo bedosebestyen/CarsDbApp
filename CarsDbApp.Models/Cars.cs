@@ -8,9 +8,11 @@ using System.Threading.Tasks;
 
 namespace DYRQO6_HFT_2022231.Models
 {
+    [Table("Cars")]
     public class Cars
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CarId { get; set; }
         public string CarType { get; set; }
         public string CarColor { get; set; }

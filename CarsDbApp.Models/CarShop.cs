@@ -10,9 +10,11 @@ using System.Threading.Tasks;
 
 namespace DYRQO6_HFT_2022231.Models
 {
+    [Table("CarShop")]
     public class CarShop
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ShopId { get; set; }
         public string Name { get; set; }
         public int AvailableCarsCount { get; set; }

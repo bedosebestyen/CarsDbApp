@@ -9,9 +9,12 @@ using System.Threading.Tasks;
 
 namespace DYRQO6_HFT_2022231.Models
 {
+
+    [Table("Manager")]
     public class Manager
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ManagerId { get; set; }
         public string Name { get; set; }
         public int Salary { get; set; }
