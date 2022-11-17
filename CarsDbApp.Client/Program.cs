@@ -37,7 +37,7 @@ namespace DYRQO6_HFT_2021222.Client
             {
                 Console.Write("Enter a shop name): ");
                 string name = Console.ReadLine();
-                rest.Post(new CarShop() { Name = name}, "carshop");
+                rest.Post(new CarShop() { Name = name}, "shop");
             }
         }
         static void List(string entity)
@@ -74,8 +74,8 @@ namespace DYRQO6_HFT_2021222.Client
 
             if (entity == "CarShop")
             {
-                List<CarShop> cars = rest.Get<CarShop>("carshop");
-                foreach (var item in cars)
+                List<CarShop> shops = rest.Get<CarShop>("shop");
+                foreach (var item in shops)
                 {
                     Console.WriteLine(item.ShopId + ": " + item.Name);
                 }
@@ -125,7 +125,7 @@ namespace DYRQO6_HFT_2021222.Client
                 Console.Write($"New shop name [old: {one.Name}]: ");
                 string name = Console.ReadLine();
                 one.Name = name;
-                rest.Put(one, "carshop");
+                rest.Put(one, "shop");
             }
         }
         static void Delete(string entity)
@@ -153,7 +153,7 @@ namespace DYRQO6_HFT_2021222.Client
             {
                 Console.Write("Enter the id of the shop you want to delete: ");
                 int id = int.Parse(Console.ReadLine());
-                rest.Delete(id, "carshop");
+                rest.Delete(id, "shop");
             }
         }
         #endregion
