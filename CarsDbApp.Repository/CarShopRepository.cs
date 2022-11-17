@@ -24,7 +24,10 @@ namespace DYRQO6_HFT_2022231.Repository
             var old = Read(item.ShopId);
             foreach (var prop in old.GetType().GetProperties())
             {
-                prop.SetValue(old, prop.GetValue(item));
+                if (prop.GetAccessors().FirstOrDefault(x => x.IsVirtual) == null)
+                {
+                    prop.SetValue(old, prop.GetValue(item));
+                }
             }
             ctx.SaveChanges();
         }
