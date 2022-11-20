@@ -3,6 +3,7 @@ using DYRQO6_HFT_2022231.Client;
 using DYRQO6_HFT_2022231.Models;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Numerics;
 
 namespace DYRQO6_HFT_2021222.Client
@@ -10,7 +11,7 @@ namespace DYRQO6_HFT_2021222.Client
     internal class Program
     {
         static RestService rest;
-        #region CRUDAPI
+        #region CRUD
         static void Create(string entity)
         {
             if (entity == "Manager")
@@ -27,7 +28,7 @@ namespace DYRQO6_HFT_2021222.Client
             }
             else if (entity == "Cars")
             {
-                Console.Write("Enter car brand): ");
+                Console.Write("Enter car brand: ");
                 string name = Console.ReadLine();
                 Console.WriteLine("Enter car price: ");
                 int price = int.Parse(Console.ReadLine());
@@ -157,11 +158,65 @@ namespace DYRQO6_HFT_2021222.Client
             }
         }
         #endregion
-        
+        #region NONCRUD
+        static void GetHighestPaidManager(string endpoint)
+        {
+            Console.WriteLine("The highest paid manager is:");
+            var manager = rest.Get<object>(endpoint);
+            foreach (var item in manager)
+            {
+                Console.WriteLine(item.ToString());
+            }
+            Console.ReadKey();
+        }
+        static void GetCustomerWithMostExpensiveCar(string endpoint)
+        {
+            Console.WriteLine("The owner of the most expensive car is: ");
+            var customer = rest.Get<object>(endpoint);
+            foreach (var item in customer)
+            {
+                Console.WriteLine(item.ToString());
+            }
+            Console.ReadKey();
+        }
+        static void GetCarPurchaseDate(string endpoint)
+        {
+            Console.WriteLine("Purchase year of the specified car: ");
+            DateTime datee = DateTime.ParseExact(Console.ReadLine(), "yyyy", CultureInfo.InvariantCulture);
+            var purchasedate = rest.Get<object>(endpoint);
+            foreach (var item in purchasedate)
+            {
+                Console.WriteLine(item.ToString());
+            }
+            Console.ReadKey();
+        }
+
+        static void GetYoungestWithCar(string endpoint)
+        {
+            Console.WriteLine("Youngest person with a car");
+            var youngest = rest.Get<object>(endpoint);
+            foreach (var item in youngest)
+            {
+                Console.WriteLine(item.ToString());
+            }
+            Console.ReadKey();
+        }
+
+        static void MostExpensiveCarInSpecifiedShop(string endpoint)
+        {
+            Console.WriteLine("The most expensive car in the specified shop");
+            var car = rest.Get<object>(endpoint);
+            foreach (var item in car)
+            {
+                Console.WriteLine(item.ToString());
+            }
+            Console.ReadKey();
+        }
+        #endregion
         static void Main(string[] args)
         {
             rest = new RestService("http://localhost:18906/", "cars");
-
+            #region Menu
             var managerSubMenu = new ConsoleMenu(args, level: 1)
                 .Add("List", () => List("Manager"))
                 .Add("Create", () => Create("Manager"))
@@ -190,15 +245,24 @@ namespace DYRQO6_HFT_2021222.Client
                 .Add("Update", () => Update("Customer"))
                 .Add("Exit", ConsoleMenu.Close);
 
+            var nonCrudSubMenu = new ConsoleMenu(args, level: 1)
+                .Add("Highest paid Manager", () => GetHighestPaidManager("stat/gethighestpaidmanager"))
+                .Add("Customer of the most expensive car", () => GetCustomerWithMostExpensiveCar("stat/getcustomerwithmostexpensivecar"))
+                .Add("Purchase date of specified car", () => GetCarPurchaseDate("stat/getcarpurchasedate"))
+                .Add("Youngest car owner", () => GetYoungestWithCar("stat/getyoungestwithcar"))
+                .Add("Most expensive car in the shop", () => MostExpensiveCarInSpecifiedShop("stat/mostexpensivecarinspecifiedshop"))
+                .Add("Exit", ConsoleMenu.Close);
 
             var menu = new ConsoleMenu(args, level: 0)
                 .Add("Customers", () => customerSubMenu.Show())
                 .Add("Cars", () => carsSubMenu.Show())
                 .Add("Managers", () => managerSubMenu.Show())
                 .Add("Shops", () => shopSubMenu.Show())
+                .Add("NonCrudMethods", () => nonCrudSubMenu.Show())
                 .Add("Exit", ConsoleMenu.Close);
 
             menu.Show();
+            #endregion
         }
     }
 }

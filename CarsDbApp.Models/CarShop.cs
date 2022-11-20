@@ -24,7 +24,7 @@ namespace DYRQO6_HFT_2022231.Models
         public virtual Manager Manager { get; set; }
         [JsonIgnore]
         public virtual ICollection<Cars> Cars { get; set; }
-        [JsonIgnore]
+        
         public virtual ICollection<Customer> Customers { get; set; }
         public CarShop()
         {

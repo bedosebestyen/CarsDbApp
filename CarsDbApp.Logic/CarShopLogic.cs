@@ -44,14 +44,13 @@ namespace DYRQO6_HFT_2022231.Logic
         }
         public IEnumerable<object> GetHighestPaidManager()
         {
+            var highest_salary = manrepo.ReadAll().Max(t => t.Salary);
             var query = from x in shoprepo.ReadAll()
-                        from y in manrepo.ReadAll()
-                        let highest_salary = manrepo.ReadAll().Max(t => t.Salary)
-                        where highest_salary == y.Salary && y.ManagerId == x.ManagerId
+                        where highest_salary == x.Manager.Salary && x.Manager.ManagerId == x.ManagerId
                         select new
                         {
-                            Name = y.Name,
-                            Salary = y.Salary,
+                            Name = x.Manager.Name,
+                            Salary = x.Manager.Salary,
                             Shop = x.Name
                         };
             return query;

@@ -27,40 +27,77 @@ namespace DYRQO6_HFT_2022231.Test
         {
             #region mockok
             mockCarsRepo = new Mock<IRepository<Cars>>();
-            mockCarsRepo.Setup(c => c.ReadAll()).Returns(new List<Cars>()
-            {
-                new Cars("1#Audi#white#1#1#2019*04*15#10000000"),
-                new Cars("2#Skoda#king blue#2#2#2009*04*15#5000000"),
-                new Cars("3#Volkswagen#black#3#3#2022*01*30#6000000"),
-                new Cars("4#Fiat#red#4#3#2000*09*19#3000000"),
-                new Cars("5#BMW#black#4#1#2020*02*22#11000000"),
-                new Cars("6#Peugeot#white#1#1#2014*06*08#4000000"),
-            }.AsQueryable());
+            Cars car1 = new Cars("1#Audi#white#1#1#2019*04*15#10000000");
+            Cars car2 = new Cars("2#Skoda#king blue#2#2#2009*04*15#5000000");
+            Cars car3 = new Cars("3#Volkswagen#black#3#3#2022*01*30#6000000");
+            Cars car4 = new Cars("4#Fiat#red#4#3#2000*09*19#3000000");
+            Cars car5 = new Cars("5#BMW#black#4#1#2020*02*22#11000000");
+            Cars car6 = new Cars("6#Peugeot#white#1#1#2014*06*08#4000000");
+
+           
 
             mockShopRepo = new Mock<IRepository<CarShop>>();
-            mockShopRepo.Setup(t => t.ReadAll()).Returns(new List<CarShop>()
-            {
-                new CarShop("1#Best cars#5#3300 Fittro Street#1"),
-                new CarShop("2#Awesome machines#4#1714 Mulberry Lane#2"),
-                new CarShop("3#Carscarscars#10#3799 Marie Street#3")
-            }.AsQueryable());
+            CarShop shop1 = new CarShop("1#Best cars#5#3300 Fittro Street#1");
+            CarShop shop2 = new CarShop("2#Awesome machines#4#1714 Mulberry Lane#2");
+            CarShop shop3 = new CarShop("3#Carscarscars#10#3799 Marie Street#3");
 
             mockCustRepo = new Mock<IRepository<Customer>>();
-            mockCustRepo.Setup(x => x.ReadAll()).Returns(new List<Customer>()
-            {
-                new Customer("1#25#Winton Dickinson#695 Willison Street"),
-                new Customer("2#22#Osmond Chambers#2111 Sand Fork Road"),
-                new Customer("3#31#Talia Cooke#2390 Carriage Court"),
-                new Customer("4#50#Isaiah Motley#217 Emeral Dreams Drive")
-            }.AsQueryable());
+            Customer customer1 = new Customer("1#25#Winton Dickinson#695 Willison Street");
+            Customer customer2 = new Customer("2#22#Osmond Chambers#2111 Sand Fork Road");
+            Customer customer3 = new Customer("3#31#Talia Cooke#2390 Carriage Court");
+            Customer customer4 = new Customer("4#50#Isaiah Motley#217 Emeral Dreams Drive");
 
             mockManRepo = new Mock<IRepository<Manager>>();
-            mockManRepo.Setup(x => x.ReadAll()).Returns(new List<Manager>()
+            Manager manager1 = new Manager("1#Pradip Xanthippe#500000#36#1");
+            Manager manager2 = new Manager("2#Lorrin Matthei#600000#47#2");
+            Manager manager3 = new Manager("3#Rúni Surayya#800000#59#3");
+
+            car1.Customer = customer1;
+            car2.Customer = customer2;
+            car3.Customer = customer3;
+            car4.Customer = customer4;
+            car5.Customer = customer4;
+            car6.Customer = customer1;
+
+            car1.Shop = shop1;
+            car2.Shop = shop2;
+            car3.Shop = shop3;
+            car4.Shop = shop3;
+            car5.Shop = shop1;
+            car6.Shop = shop1;
+
+            shop1.Manager = manager1;
+            shop2.Manager = manager2;
+            shop3.Manager = manager3;
+
+            var customers = new List<Customer>()
             {
-                new Manager("1#Pradip Xanthippe#500000#36#1"),
-                new Manager("2#Lorrin Matthei#600000#47#2"),
-                new Manager("3#Rúni Surayya#800000#59#3")
-            }.AsQueryable());
+                customer1,
+                customer2,
+                customer3,
+                customer4
+            }.AsQueryable();
+            var cars = new List<Cars>()
+            {
+                car1,
+                car2,
+                car3,
+                car4,
+                car5,
+                car6
+            }.AsQueryable();
+            var shops = new List<CarShop>()
+            {
+                shop1, shop2, shop3
+            }.AsQueryable();
+            var managers = new List<Manager>()
+            {
+                manager1, manager2, manager3
+            }.AsQueryable();
+            mockCarsRepo.Setup(c => c.ReadAll()).Returns(cars);
+            mockCustRepo.Setup(c => c.ReadAll()).Returns(customers);
+            mockManRepo.Setup(m => m.ReadAll()).Returns(managers);
+            mockShopRepo.Setup(s => s.ReadAll()).Returns(shops);
             cl = new CarsLogic(mockCarsRepo.Object, mockCustRepo.Object, mockShopRepo.Object);
             csl = new CarShopLogic(mockShopRepo.Object, mockManRepo.Object);
             #endregion

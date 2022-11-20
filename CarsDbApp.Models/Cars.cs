@@ -22,7 +22,6 @@ namespace DYRQO6_HFT_2022231.Models
         public int ShopId { get; set; }
         public DateTime PurchaseDate { get; set; }
         public int Price { get; set; }  
-
         public virtual Customer Customer { get; set; }
         public virtual CarShop Shop { get; set; }
         public Cars()
