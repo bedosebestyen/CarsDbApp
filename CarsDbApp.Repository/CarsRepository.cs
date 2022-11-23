@@ -21,11 +21,6 @@ namespace DYRQO6_HFT_2022231.Repository
         public override void Update(Cars item)
         {
             var old = Read(item.CarId);
-<<<<<<< HEAD
-            var asd = old.GetType().GetProperty("CarType");
-            asd.SetValue(old, asd.GetValue(item));
-=======
->>>>>>> 9b93e7e14cd55d1233fd662f1a6927086b0551c1
             foreach (var prop in old.GetType().GetProperties())
             {
                 if (prop.GetAccessors().FirstOrDefault(x => x.IsVirtual) == null)
