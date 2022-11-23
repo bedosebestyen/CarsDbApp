@@ -122,12 +122,14 @@ namespace DYRQO6_HFT_2021222.Client
             {
                 Console.Write("Enter the id of the shop you want to update: ");
                 int id = int.Parse(Console.ReadLine());
-                CarShop one = rest.Get<CarShop>(id, "carshop");
+                CarShop one = rest.Get<CarShop>(id, "shop");
                 Console.Write($"New shop name [old: {one.Name}]: ");
                 string name = Console.ReadLine();
                 one.Name = name;
                 rest.Put(one, "shop");
             }
+            Console.WriteLine(entity + "sucessfully updated");
+            Console.ReadLine();
         }
         static void Delete(string entity)
         {
@@ -181,6 +183,7 @@ namespace DYRQO6_HFT_2021222.Client
         }
         static void GetCarPurchaseDate(string endpoint)
         {
+            Console.WriteLine("Purchase date of the oldest car: ");
             var purchasedate = rest.Get<object>(endpoint);
             foreach (var item in purchasedate)
             {
@@ -200,9 +203,9 @@ namespace DYRQO6_HFT_2021222.Client
             Console.ReadKey();
         }
 
-        static void MostExpensiveCarInSpecifiedShop(string endpoint)
+        static void ShopWithBmw(string endpoint)
         {
-            Console.WriteLine("The most expensive car in the specified shop");
+            Console.WriteLine("The shop which sells a BMW");
             var car = rest.Get<object>(endpoint);
             foreach (var item in car)
             {
@@ -248,7 +251,7 @@ namespace DYRQO6_HFT_2021222.Client
                 .Add("Customer of the most expensive car", () => GetCustomerWithMostExpensiveCar("stat/getcustomerwithmostexpensivecar"))
                 .Add("Purchase date of specified car", () => GetCarPurchaseDate("stat/getcarpurchasedate"))
                 .Add("Youngest car owner", () => GetYoungestWithCar("stat/getyoungestwithcar"))
-                .Add("Most expensive car in the shop", () => MostExpensiveCarInSpecifiedShop("stat/mostexpensivecarinspecifiedshop"))
+                .Add("Most expensive car in the shop", () => ShopWithBmw("stat/shopwithbmw"))
                 .Add("Exit", ConsoleMenu.Close);
 
             var menu = new ConsoleMenu(args, level: 0)
