@@ -271,6 +271,6 @@ namespace DYRQO6_HFT_2021222.Client
 
             menu.Show();
             #endregion
-        }
+        }  
     }
 }
