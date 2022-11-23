@@ -30,7 +30,7 @@ namespace DYRQO6_HFT_2022231.Endpoint.Controllers
             return this.carsLogic.GetCustomerWithMostExpensiveCar();
         }
 
-        [HttpGet]
+        [HttpGet("{name}")]
         public IEnumerable<object> GetCarPurchaseDate()
         {
             return carsLogic.GetCarPurchaseDateOfOldestCar();
@@ -42,7 +42,7 @@ namespace DYRQO6_HFT_2022231.Endpoint.Controllers
             return this.carsLogic.GetYoungestWithCar();
         }
 
-        [HttpGet]
+        [HttpGet("{name}")]
         public IEnumerable<object> ShopWithBmw()
         {
             return this.carsLogic.ShopWithBmw();

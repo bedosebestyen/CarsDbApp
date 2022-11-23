@@ -37,7 +37,7 @@ namespace DYRQO6_HFT_2022231.Endpoint.Controllers
             this.logic.Create(value);
         }
 
-        [HttpPut]
+        [HttpPut("{id}")]
         public void Update([FromBody] Cars value)
         {
             this.logic.Update(value);
