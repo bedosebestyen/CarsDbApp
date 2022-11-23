@@ -124,9 +124,9 @@ namespace DYRQO6_HFT_2022231.Test
         public void WhenDidTheCustomerBuyTheCarTest()
         {
             //ACT
-            var actual = cl.GetCarPurchaseDate("Osmond Chambers").ToList();
+            var actual = cl.GetCarPurchaseDateOfOldestCar().ToList();
             //ASSERT
-            Assert.That(actual[0].GetHashCode(), Is.EqualTo(new { Date = 2009, Name = "Osmond Chambers", CarType = "Skoda" }.GetHashCode()));
+            Assert.That(actual[0].GetHashCode(), Is.EqualTo(new { Date = "2000.9.19", Name = "Isaiah Motley", CarType = "Fiat" }.GetHashCode()));
         }
         [Test]
         public void YoungestCustomerWithCarTest()
@@ -152,7 +152,7 @@ namespace DYRQO6_HFT_2022231.Test
         [Test]
         public void MostExpensiveCarInSpecifiedShopTest()
         {
-            var actual = cl.MostExpensiveCarInSpecifiedShop("Best cars").ToList();
+            var actual = cl.ShopWithBmw().ToList();
 
             Assert.That(actual[0].GetHashCode(), Is.EqualTo(new { CarType = "BMW", Price = 11000000, Shop = "Best cars" }.GetHashCode()));
         }

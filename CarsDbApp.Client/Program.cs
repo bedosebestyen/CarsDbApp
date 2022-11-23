@@ -181,8 +181,6 @@ namespace DYRQO6_HFT_2021222.Client
         }
         static void GetCarPurchaseDate(string endpoint)
         {
-            Console.WriteLine("Purchase year of the specified car: ");
-            DateTime datee = DateTime.ParseExact(Console.ReadLine(), "yyyy", CultureInfo.InvariantCulture);
             var purchasedate = rest.Get<object>(endpoint);
             foreach (var item in purchasedate)
             {

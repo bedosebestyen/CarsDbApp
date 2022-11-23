@@ -1,5 +1,6 @@
 ﻿using DYRQO6_HFT_2022231.Logic;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 
 namespace DYRQO6_HFT_2022231.Endpoint.Controllers
@@ -30,9 +31,9 @@ namespace DYRQO6_HFT_2022231.Endpoint.Controllers
         }
 
         [HttpGet("{name}")]
-        public IEnumerable<object> GetCarPurchaseDate(string name)
+        public IEnumerable<object> GetCarPurchaseDate()
         {
-            return carsLogic.GetCarPurchaseDate(name);
+            return carsLogic.GetCarPurchaseDateOfOldestCar();
         }
 
         [HttpGet]
@@ -42,9 +43,9 @@ namespace DYRQO6_HFT_2022231.Endpoint.Controllers
         }
 
         [HttpGet("{name}")]
-        public IEnumerable<object> MostExpensiveCarInSpecifiedShop(string name)
+        public IEnumerable<object> ShopWithBmw()
         {
-            return this.carsLogic.MostExpensiveCarInSpecifiedShop(name);
+            return this.carsLogic.ShopWithBmw();
         }
     }
 }

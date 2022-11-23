@@ -65,7 +65,7 @@ namespace DYRQO6_HFT_2021222.Test
         [Test]
         public void CustomersCreateTest()
         {
-            var sample = new Customer() { Name = "János" };
+            var sample = new Customer() { Name = "János" , Address = "a1", Age = 33};
             //ACT
             crl.Create(sample);
             //ASSERT
@@ -76,7 +76,7 @@ namespace DYRQO6_HFT_2021222.Test
         [Test]
         public void CarShopCreateTest()
         {
-            var sample = new CarShop() { Name = "BestCarsss" };
+            var sample = new CarShop() { Name = "BestCarsss", Address = "a1"};
             //ACT
             csl.Create(sample);
             //ASSERT

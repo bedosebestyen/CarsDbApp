@@ -95,14 +95,15 @@ namespace DYRQO6_HFT_2022231.Logic
             return query;
         }
 
-        public IEnumerable<object> GetCarPurchaseDate(string name)
+        public IEnumerable<object> GetCarPurchaseDateOfOldestCar()
         {
+            var oldest = carsrepo.ReadAll().Min(t => t.PurchaseDate);
             return from x in carsrepo.ReadAll()
-                   where x.Customer.Name == name 
+                   where oldest.Date == x.PurchaseDate
                    && x.CustomerId == x.Customer.CustomerId
                    select new
                    {
-                       Date = x.PurchaseDate.Year,
+                       Date = x.PurchaseDate.Year + "." + x.PurchaseDate.Month + "." + x.PurchaseDate.Day,
                        Name = x.Customer.Name,
                        CarType = x.CarType
                    };
@@ -122,11 +123,10 @@ namespace DYRQO6_HFT_2022231.Logic
                    };
         }
 
-        public IEnumerable<object> MostExpensiveCarInSpecifiedShop(string name)
+        public IEnumerable<object> ShopWithBmw()
         {
             return from x in carsrepo.ReadAll()
-                   let Car = carsrepo.ReadAll().Max(x => x.Price)
-                   where x.Shop.Name == name && x.Price == Car && x.ShopId == x.Shop.ShopId
+                   where x.CarType == "BMW" && x.ShopId == x.Shop.ShopId
                    select new
                    {
                        CarType = x.CarType,
