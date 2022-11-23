@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "F8md8gR7AtrrjWj6M0AFzqb+2Bfe/VebzHjDKcFHgDwI1oTjKlqLB56AxUvnmp9ctocWtXXJJVpi+3iboFRLhA==",
+  "dgSpecHash": "tBzaWFq/NmUy/bdqqwVV2awldIkkVhJIVnS5AWeJ9XP9+YfG2dBsoEx0vIhcl3ZHytPUbXTn07JrRB20C3JI7w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sebes\\source\\repos\\CarsDbApp\\DYRQO6_HFT_2022231.Endpoint\\DYRQO6_HFT_2022231.Endpoint.csproj",
+  "projectFilePath": "C:\\Users\\sebes\\Source\\Repos\\DYRQO6_HFT_2022231\\DYRQO6_HFT_2022231.Endpoint\\DYRQO6_HFT_2022231.Endpoint.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sebes\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\sebes\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

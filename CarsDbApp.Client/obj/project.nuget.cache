@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DCVhjZY6jbWW2hQCVyXtLQxGzz7nKHjfy2vs3m9NB8geDyrsXf35j/aFWqkklWIQzmmCvkFjZQikGqBsBopJlw==",
+  "dgSpecHash": "o/cVDwNzYBE1v4eQhQWpySA0T28DH1bvxXYVqXuSEopw0zL5oeXaJI+nGYMf+l5833WdUr2+MTS9PiZEcaCbLQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sebes\\source\\repos\\CarsDbApp\\CarsDbApp.Client\\DYRQO6_HFT_2022231.Client.csproj",
+  "projectFilePath": "C:\\Users\\sebes\\Source\\Repos\\DYRQO6_HFT_2022231\\CarsDbApp.Client\\DYRQO6_HFT_2022231.Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sebes\\.nuget\\packages\\consolemenu-simple\\2.4.3\\consolemenu-simple.2.4.3.nupkg.sha512",
     "C:\\Users\\sebes\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
