@@ -26,16 +26,38 @@ namespace DYRQO6_HFT_2022231.Logic
 
         public void Create(Cars item)
         {
+            if (item.CarType == null)
+            {
+                throw new NullReferenceException("Car's brand cannot be null!");
+            }
+            if (item.CarType.Length > 150)
+            {
+                throw new ArgumentException("Please use less characters!(max:150)");
+            }
+            if (item.CarColor.Length > 150)
+            {
+                throw new ArgumentException("Please use less characters!(max:150)");
+            }
             carsrepo.Create(item);
         }
 
         public void Delete(int id)
         {
+            var car = this.carsrepo.Read(id);
+            if (car == null)
+            {
+                throw new ArgumentException("Car does not exist!");
+            }
             carsrepo.Delete(id);
         }
 
         public Cars Read(int id)
         {
+            var car = this.carsrepo.Read(id);
+            if (car == null)
+            {
+                throw new ArgumentException("Car does not exist!");
+            }
             return carsrepo.Read(id);
         }
 
@@ -46,6 +68,18 @@ namespace DYRQO6_HFT_2022231.Logic
 
         public void Update(Cars item)
         {
+            if (item.CarType == null)
+            {
+                throw new NullReferenceException("Car's name cannot be null");
+            }
+            if (item.CarType.Length > 150)
+            {
+                throw new ArgumentException("Please use less characters!(max:150)");
+            }
+            if (item.CarColor.Length > 150)
+            {
+                throw new ArgumentException("Please use less characters!(max:150)");
+            }
             carsrepo.Create(item);
         }
         public IEnumerable<object> GetCustomerWithMostExpensiveCar()

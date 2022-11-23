@@ -16,11 +16,16 @@ namespace DYRQO6_HFT_2022231.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CustomerId { get; set; }
+        [Range(17, 100)]
         public int Age { get; set; }
+        [StringLength(150)]
         public string Name { get; set; }
+        [StringLength(150)]
         public string Address { get; set; }
+        [NotMapped]
         [JsonIgnore]
         public virtual ICollection<Cars> Cars { get; set; }
+        [NotMapped]
         [JsonIgnore]
         public virtual ICollection<CarShop> Shop { get; set; }
         public Customer()

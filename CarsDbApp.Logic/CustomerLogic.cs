@@ -17,16 +17,42 @@ namespace DYRQO6_HFT_2022231.Logic
 
         public void Create(Customer item)
         {
+            if (item.Name == null)
+            {
+                throw new NullReferenceException("Customers  's name cannot be null!");
+            }
+            if(item.Name.Length > 150)
+            {
+                throw new ArgumentException("Please use less characters!(max:150)");
+            }
+            if (item.Address.Length > 150)
+            {
+                throw new ArgumentException("Please use less characters!(max:150)");
+            }
+            if (item.Age > 100 || item.Age < 17)
+            {
+                throw new ArgumentException("Minimum age is 17, Max age is 100. Please stay inside the scope!");
+            }
             this.repo.Create(item);
         }
 
         public void Delete(int id)
         {
+            var customer = this.repo.Read(id);
+            if (customer == null)
+            {
+                throw new ArgumentException("Customer does not exist!");
+            }
             this.repo.Delete(id);
         }
 
         public Customer Read(int id)
         {
+            var customer = this.repo.Read(id);
+            if (customer == null)
+            {
+                throw new ArgumentException("Customer does not exist!");
+            }
             return this.repo.Read(id);
         }
 
@@ -37,6 +63,22 @@ namespace DYRQO6_HFT_2022231.Logic
 
         public void Update(Customer item)
         {
+            if (item.Name == null)
+            {
+                throw new NullReferenceException("Customer's name cannot be null");
+            }
+            if (item.Name.Length > 150)
+            {
+                throw new ArgumentException("Please use less characters!(max:150)");
+            }
+            if (item.Address.Length > 150)
+            {
+                throw new ArgumentException("Please use less characters!(max:150)");
+            }
+            if (item.Age > 100 || item.Age < 17)
+            {
+                throw new ArgumentException("Minimum age is 17, Max age is 100. Please stay inside the scope!");
+            }
             this.repo.Create(item);
         }
     }

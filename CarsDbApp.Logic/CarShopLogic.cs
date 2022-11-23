@@ -21,15 +21,37 @@ namespace DYRQO6_HFT_2022231.Logic
 
         public void Create(CarShop item)
         {
+            if (item.Name == null)
+            {
+                throw new NullReferenceException("Shop's name cannot be null!");
+            }
+            if (item.Name.Length > 150)
+            {
+                throw new ArgumentException("Please use less characters!(max:150)");
+            }
+            if (item.Address.Length > 150)
+            {
+                throw new ArgumentException("Please use less characters!(max:150)");
+            }
             shoprepo.Create(item);
         }
 
         public void Delete(int id)
         {
+            var shop = this.shoprepo.Read(id);
+            if (shop == null)
+            {
+                throw new ArgumentException("Shop does not exist!");
+            }
             shoprepo.Delete(id);
         }
         public CarShop Read(int id)
         {
+            var shop = this.shoprepo.Read(id);
+            if (shop == null)
+            {
+                throw new ArgumentException("Shop does not exist!");
+            }
             return shoprepo.Read(id);
         }
 
@@ -40,6 +62,18 @@ namespace DYRQO6_HFT_2022231.Logic
 
         public void Update(CarShop item)
         {
+            if (item.Name == null)
+            {
+                throw new NullReferenceException("Shop's name cannot be null");
+            }
+            if (item.Name.Length > 150)
+            {
+                throw new ArgumentException("Please use less characters!(max:150)");
+            }
+            if (item.Address.Length > 150)
+            {
+                throw new ArgumentException("Please use less characters!(max:150)");
+            }
             shoprepo.Create(item);
         }
         public IEnumerable<object> GetHighestPaidManager()

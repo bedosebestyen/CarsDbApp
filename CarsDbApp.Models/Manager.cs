@@ -16,11 +16,14 @@ namespace DYRQO6_HFT_2022231.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ManagerId { get; set; }
+        [StringLength(150)]
         public string Name { get; set; }
         public int Salary { get; set; }
+        [Range(18, 90)]
         public int Age { get; set; }
         [ForeignKey("CarShopId")]
         public int CarshopId { get; set; }
+        [NotMapped]
         [JsonIgnore]
         public virtual CarShop CarShop { get; set; }
         public Manager()
