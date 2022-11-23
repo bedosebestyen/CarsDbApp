@@ -70,11 +70,7 @@ namespace DYRQO6_HFT_2022231.Logic
             {
                 throw new ArgumentException("Please use less characters!(max:150)");
             }
-            if (item.Address.Length > 150)
-            {
-                throw new ArgumentException("Please use less characters!(max:150)");
-            }
-            shoprepo.Create(item);
+            shoprepo.Update(item);
         }
         public IEnumerable<object> GetHighestPaidManager()
         {

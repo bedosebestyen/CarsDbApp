@@ -76,11 +76,7 @@ namespace DYRQO6_HFT_2022231.Logic
             {
                 throw new ArgumentException("Please use less characters!(max:150)");
             }
-            if (item.CarColor.Length > 150)
-            {
-                throw new ArgumentException("Please use less characters!(max:150)");
-            }
-            carsrepo.Create(item);
+            carsrepo.Update(item);
         }
         public IEnumerable<object> GetCustomerWithMostExpensiveCar()
         {

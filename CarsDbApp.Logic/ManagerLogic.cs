@@ -68,10 +68,6 @@ namespace DYRQO6_HFT_2022231.Logic
             {
                 throw new ArgumentException("Please use less characters!(max:150)");
             }
-            if (item.Age > 90 || item.Age < 18)
-            {
-                throw new ArgumentException("Minimum age is 18, Max age is 90. Please stay inside the scope!");
-            }
             manrepo.Update(item);
         }
     }
