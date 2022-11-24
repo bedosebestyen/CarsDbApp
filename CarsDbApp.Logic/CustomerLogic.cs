@@ -29,7 +29,7 @@ namespace DYRQO6_HFT_2022231.Logic
             {
                 throw new ArgumentException("Please use less characters!(max:150)");
             }
-            if (item.Age > 100 || item.Age < 17)
+            if (item.Age < 100 || item.Age > 17)
             {
                 throw new ArgumentException("Minimum age is 17, Max age is 100. Please stay inside the scope!");
             }

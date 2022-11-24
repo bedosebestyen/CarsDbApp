@@ -3,6 +3,7 @@ using DYRQO6_HFT_2022231.Client;
 using DYRQO6_HFT_2022231.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Numerics;
 
@@ -18,27 +19,37 @@ namespace DYRQO6_HFT_2021222.Client
             {
                 Console.Write("Enter manager name: ");
                 string name = Console.ReadLine();
-                rest.Post(new Manager() { Name = name }, "manager");
+                Console.WriteLine("Enter the manager's age");
+                int age = int.Parse(Console.ReadLine());
+                rest.Post(new Manager() { Name = name, Age = age }, "manager");
             }
             else if (entity == "Customer")
             {
                 Console.Write("Enter customer name: ");
                 string name = Console.ReadLine();
-                rest.Post(new Customer() { Name = name }, "customer");
+                Console.WriteLine("Enter the customer's address");
+                string address = Console.ReadLine();
+                Console.WriteLine("Enter the customer' age: ");
+                int age = int.Parse(Console.ReadLine());
+                rest.Post(new Customer() { Name = name , Address = address, Age = age}, "customer");
             }
             else if (entity == "Cars")
             {
                 Console.Write("Enter car brand: ");
                 string name = Console.ReadLine();
+                Console.WriteLine("Enter car color");
+                string color = Console.ReadLine();
                 Console.WriteLine("Enter car price: ");
                 int price = int.Parse(Console.ReadLine());
-                rest.Post(new Cars() { CarType = name , Price = price}, "cars");
+                rest.Post(new Cars() { CarType = name , Price = price, CarColor = color}, "cars");
             }
             else if (entity == "CarShop")
             {
                 Console.Write("Enter a shop name): ");
                 string name = Console.ReadLine();
-                rest.Post(new CarShop() { Name = name}, "shop");
+                Console.WriteLine("Enter the shop's address: ");
+                string address = Console.ReadLine();
+                rest.Post(new CarShop() { Name = name, Address = address}, "shop");
             }
         }
         static void List(string entity)
@@ -48,7 +59,7 @@ namespace DYRQO6_HFT_2021222.Client
                 List<Manager> managers = rest.Get<Manager>("manager");
                 foreach (var item in managers)
                 {
-                    Console.WriteLine(item.ManagerId + ": " + item.Name);
+                    Console.WriteLine(item.ManagerId + " Name: " + item.Name + " Age: " + item.Age);
                 }
             }
             Console.ReadLine();
@@ -58,7 +69,7 @@ namespace DYRQO6_HFT_2021222.Client
                 List<Customer> customers = rest.Get<Customer>("customer");
                 foreach (var item in customers)
                 {
-                    Console.WriteLine(item.CustomerId + ": " + item.Name);
+                    Console.WriteLine(item.CustomerId + " Name: " + item.Name + " Address: " + item.Address + " Age: " + item.Age);
                 }
             }
             Console.ReadLine();
@@ -68,7 +79,7 @@ namespace DYRQO6_HFT_2021222.Client
                 List<Cars> cars = rest.Get<Cars>("cars");
                 foreach (var item in cars)
                 {
-                    Console.WriteLine(item.CarId + ": " + item.CarType + " price:" + item.Price);
+                    Console.WriteLine(item.CarId + " Brand: " + item.CarType + " Price: " + item.Price + " Color: " + item.CarColor);
                 }
             }
             Console.ReadLine();
@@ -78,7 +89,7 @@ namespace DYRQO6_HFT_2021222.Client
                 List<CarShop> shops = rest.Get<CarShop>("shop");
                 foreach (var item in shops)
                 {
-                    Console.WriteLine(item.ShopId + ": " + item.Name);
+                    Console.WriteLine(item.ShopId + " Name: " + item.Name + " Address: " + item.Address);
                 }
             }
             Console.ReadLine();
