@@ -79,7 +79,7 @@ namespace DYRQO6_HFT_2022231.Logic
             {
                 throw new ArgumentException("Minimum age is 17, Max age is 100. Please stay inside the scope!");
             }
-            this.repo.Create(item);
+            this.repo.Update(item);
         }
     }
 }
