@@ -18,9 +18,9 @@ namespace DYRQO6_HFT_2022231.Models
         public int CustomerId { get; set; }
         [Range(17, 100)]
         public int Age { get; set; }
-        [StringLength(150)]
+        [StringLength(250)]
         public string Name { get; set; }
-        [StringLength(150)]
+        [StringLength(250)]
         public string Address { get; set; }
         [NotMapped]
         [JsonIgnore]

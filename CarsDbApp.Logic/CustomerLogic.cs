@@ -19,19 +19,19 @@ namespace DYRQO6_HFT_2022231.Logic
         {
             if (item.Name == null)
             {
-                throw new NullReferenceException("Customers  's name cannot be null!");
+                throw new NullReferenceException("Customers 's name cannot be null!");
             }
-            if(item.Name.Length > 150)
-            {
-                throw new ArgumentException("Please use less characters!(max:150)");
-            }
-            if (item.Address.Length > 150)
-            {
-                throw new ArgumentException("Please use less characters!(max:150)");
-            }
-            if (item.Age < 100 || item.Age > 17)
+            if (item.Age < 17 || item.Age > 100)
             {
                 throw new ArgumentException("Minimum age is 17, Max age is 100. Please stay inside the scope!");
+            }
+            if (item.Name.Count() > 250)
+            {
+                throw new ArgumentException("Please use less characters!");
+            }
+            if (item.Address.Count() > 250)
+            {
+                throw new ArgumentException("Please use less characters!");
             }
             this.repo.Create(item);
         }

@@ -30,13 +30,9 @@ namespace DYRQO6_HFT_2022231.Logic
             {
                 throw new NullReferenceException("Car's brand cannot be null!");
             }
-            if (item.CarType.Length > 150)
+            if (item.CarType.Count() >=250)
             {
-                throw new ArgumentException("Please use less characters!(max:150)");
-            }
-            if (item.CarColor.Length > 150)
-            {
-                throw new ArgumentException("Please use less characters!(max:150)");
+                throw new ArgumentException("Please use less characters!");
             }
             carsrepo.Create(item);
         }

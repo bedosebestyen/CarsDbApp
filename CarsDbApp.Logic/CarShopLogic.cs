@@ -25,13 +25,9 @@ namespace DYRQO6_HFT_2022231.Logic
             {
                 throw new NullReferenceException("Shop's name cannot be null!");
             }
-            if (item.Name.Length > 150)
+            if (item.Name.Count() > 250)
             {
-                throw new ArgumentException("Please use less characters!(max:150)");
-            }
-            if (item.Address.Length > 150)
-            {
-                throw new ArgumentException("Please use less characters!(max:150)");
+                throw new ArgumentException("Please use less characters!");
             }
             shoprepo.Create(item);
         }

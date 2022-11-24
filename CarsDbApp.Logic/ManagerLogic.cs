@@ -22,13 +22,13 @@ namespace DYRQO6_HFT_2022231.Logic
             {
                 throw new NullReferenceException("Manager's name cannot be null!");
             }
-            if (item.Name.Length > 150)
-            {
-                throw new ArgumentException("Please use less characters!(max:150)");
-            }
-            if (item.Age < 90 || item.Age > 18)
+            if (item.Age < 18 || item.Age > 90)
             {
                 throw new ArgumentException("Minimum age is 18, Max age is 90. Please stay inside the scope!");
+            }
+            if (item.Name.Count() > 250)
+            {
+                throw new ArgumentException("Please use less characters!");
             }
             manrepo.Create(item);
         }

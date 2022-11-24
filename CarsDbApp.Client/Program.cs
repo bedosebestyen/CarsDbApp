@@ -218,6 +218,7 @@ namespace DYRQO6_HFT_2021222.Client
         {
             Console.WriteLine("The shop which sells a BMW");
             var car = rest.Get<object>(endpoint);
+            
             foreach (var item in car)
             {
                 Console.WriteLine(item.ToString());
