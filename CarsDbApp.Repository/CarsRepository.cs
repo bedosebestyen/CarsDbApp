@@ -20,15 +20,14 @@ namespace DYRQO6_HFT_2022231.Repository
 
         public override void Update(Cars item)
         {
-            var old = Read(item.CarId);
-            old.CarType = item.CarType;
-            old.PurchaseDate = item.PurchaseDate;
-            old.Price = item.Price;
-            old.CarColor = item.CarColor;
-            old.Customer = item.Customer;
-            old.CustomerId = item.CustomerId;
-            old.Shop = item.Shop;
-            old.ShopId = item.ShopId;
+            var old = Read(item.CarId);  
+            foreach (var prop in old.GetType().GetProperties())
+            {
+                if (prop.GetAccessors().FirstOrDefault(x => x.IsVirtual) == null)
+                {
+                    prop.SetValue(old, prop.GetValue(item));
+                }
+            }
             ctx.SaveChanges();
         }
     }

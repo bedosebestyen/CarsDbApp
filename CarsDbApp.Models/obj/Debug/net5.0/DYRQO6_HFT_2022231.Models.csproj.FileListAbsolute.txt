@@ -10,3 +10,15 @@ C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Models\obj\Debug\net5.0\DYRQO6_H
 C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Models\obj\Debug\net5.0\refint\DYRQO6_HFT_2022231.Models.dll
 C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Models\obj\Debug\net5.0\DYRQO6_HFT_2022231.Models.pdb
 C:\Users\sebes\source\repos\CarsDbApp\CarsDbApp.Models\obj\Debug\net5.0\ref\DYRQO6_HFT_2022231.Models.dll
+C:\Users\sebes\Source\Repos\DYRQO6_HFT_2022231\CarsDbApp.Models\bin\Debug\net5.0\DYRQO6_HFT_2022231.Models.deps.json
+C:\Users\sebes\Source\Repos\DYRQO6_HFT_2022231\CarsDbApp.Models\bin\Debug\net5.0\DYRQO6_HFT_2022231.Models.dll
+C:\Users\sebes\Source\Repos\DYRQO6_HFT_2022231\CarsDbApp.Models\bin\Debug\net5.0\DYRQO6_HFT_2022231.Models.pdb
+C:\Users\sebes\Source\Repos\DYRQO6_HFT_2022231\CarsDbApp.Models\obj\Debug\net5.0\DYRQO6_HFT_2022231.Models.csproj.AssemblyReference.cache
+C:\Users\sebes\Source\Repos\DYRQO6_HFT_2022231\CarsDbApp.Models\obj\Debug\net5.0\DYRQO6_HFT_2022231.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sebes\Source\Repos\DYRQO6_HFT_2022231\CarsDbApp.Models\obj\Debug\net5.0\DYRQO6_HFT_2022231.Models.AssemblyInfoInputs.cache
+C:\Users\sebes\Source\Repos\DYRQO6_HFT_2022231\CarsDbApp.Models\obj\Debug\net5.0\DYRQO6_HFT_2022231.Models.AssemblyInfo.cs
+C:\Users\sebes\Source\Repos\DYRQO6_HFT_2022231\CarsDbApp.Models\obj\Debug\net5.0\DYRQO6_HFT_2022231.Models.csproj.CoreCompileInputs.cache
+C:\Users\sebes\Source\Repos\DYRQO6_HFT_2022231\CarsDbApp.Models\obj\Debug\net5.0\DYRQO6_HFT_2022231.Models.dll
+C:\Users\sebes\Source\Repos\DYRQO6_HFT_2022231\CarsDbApp.Models\obj\Debug\net5.0\refint\DYRQO6_HFT_2022231.Models.dll
+C:\Users\sebes\Source\Repos\DYRQO6_HFT_2022231\CarsDbApp.Models\obj\Debug\net5.0\DYRQO6_HFT_2022231.Models.pdb
+C:\Users\sebes\Source\Repos\DYRQO6_HFT_2022231\CarsDbApp.Models\obj\Debug\net5.0\ref\DYRQO6_HFT_2022231.Models.dll

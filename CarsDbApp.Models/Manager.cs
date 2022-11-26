@@ -23,8 +23,8 @@ namespace DYRQO6_HFT_2022231.Models
         public int Age { get; set; }
         [ForeignKey("CarShopId")]
         public int CarshopId { get; set; }
-        [NotMapped]
-        [JsonIgnore]
+        //[NotMapped]
+        //[JsonIgnore]
         public virtual CarShop CarShop { get; set; }
         public Manager()
         {
