@@ -103,7 +103,10 @@ namespace DYRQO6_HFT_2021222.Client
                 Manager one = rest.Get<Manager>(id, "manager");
                 Console.Write($"New name [old: {one.Name}]: ");
                 string name = Console.ReadLine();
+                Console.Write($"New age [old: {one.Age}]: ");
+                int age = int.Parse(Console.ReadLine());
                 one.Name = name;
+                one.Age = age;
                 rest.Put(one, "manager");
             }
 
@@ -114,7 +117,13 @@ namespace DYRQO6_HFT_2021222.Client
                 Customer one = rest.Get<Customer>(id, "customer");
                 Console.Write($"New name [old: {one.Name}]: ");
                 string name = Console.ReadLine();
+                Console.Write($"New address [old: {one.Address}]: ");
+                string address = Console.ReadLine();
+                Console.Write($"New age [old: {one.Age}]: ");
+                int age = int.Parse(Console.ReadLine());
                 one.Name = name;
+                one.Address = address;
+                one.Age = age;
                 rest.Put(one, "customer");
             }
 
@@ -125,7 +134,13 @@ namespace DYRQO6_HFT_2021222.Client
                 Cars one = rest.Get<Cars>(id, "cars");
                 Console.Write($"New car brand [old: {one.CarType}]: ");
                 string brand = Console.ReadLine();
+                Console.Write($"New price [old: {one.Price}]: ");
+                int price = int.Parse(Console.ReadLine());
+                Console.Write($"New car coloer [old: {one.CarColor}]: ");
+                string color = Console.ReadLine();
                 one.CarType = brand;
+                one.Price = price;
+                one.CarColor = color;
                 rest.Put(one, "cars");
             }
 
@@ -136,10 +151,13 @@ namespace DYRQO6_HFT_2021222.Client
                 CarShop one = rest.Get<CarShop>(id, "shop");
                 Console.Write($"New shop name [old: {one.Name}]: ");
                 string name = Console.ReadLine();
+                Console.Write($"New address [old: {one.Address}]: ");
+                string address = Console.ReadLine();
                 one.Name = name;
+                one.Address = address;
                 rest.Put(one, "shop");
             }
-            Console.WriteLine(entity + "sucessfully updated");
+            Console.WriteLine(entity + " sucessfully updated");
             Console.ReadLine();
         }
         static void Delete(string entity)
