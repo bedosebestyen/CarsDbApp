@@ -52,6 +52,16 @@ namespace DYRQO6_HFT_2021222.Test
                 Times.Once);
         }
         [Test]
+        public void CustomersReadAllTest()
+        {
+            //ACT
+            crl.ReadAll();
+            //ASSERT
+            mockCustomerRepository.Verify(
+                x => x.ReadAll(),
+                Times.Once);
+        }
+        [Test]
         public void CarsCreateTest()
         {
             var sample = new Cars("1#Audi#white#1#1#2019*04*15#10000000");
